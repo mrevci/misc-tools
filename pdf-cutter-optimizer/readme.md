@@ -40,4 +40,3 @@ Great for trimming and preparing upload-friendly versions of PDF files, such as 
 
 - Install Ghostscript first: [ghostscript.com/releases](https://www.ghostscript.com/releases/)
 - Scanned PDFs won't become searchable - OCR them first if needed
-```
