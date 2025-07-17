@@ -1,5 +1,5 @@
 
-```markdown
+
 # ExtractAndCompress-PDF.ps1
 
 Extract specific pages from a PDF and compress the result using QPDF and Ghostscript.  
