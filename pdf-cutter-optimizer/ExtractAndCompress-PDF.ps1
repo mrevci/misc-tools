@@ -21,10 +21,11 @@ if (-not (Get-Command gswin64c.exe -ErrorAction SilentlyContinue)) {
 }
 
 # --- paths ------------------------------------------------------------------
+$Timestamp = (Get-Date).ToString("yyyy-MM-dd_HH-mm-ss") #for use with CSV
 if (!(Test-Path $OutputDir)) { New-Item -ItemType Directory -Path $OutputDir | Out-Null }
 $base      = [IO.Path]::GetFileNameWithoutExtension($InputPDF)
 $tempPdf   = Join-Path $OutputDir "$base.tmp.pdf"
-$finalPdf  = Join-Path $OutputDir "$base.compressed.pdf"
+$finalPdf  = Join-Path $OutputDir "$base.compressed$Timestamp.pdf"
 
 # --- processing -------------------------------------------------------------
 qpdf "$InputPDF" --pages . $Pages -- "$tempPdf"
