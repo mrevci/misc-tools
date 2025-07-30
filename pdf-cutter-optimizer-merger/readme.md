@@ -40,3 +40,20 @@ Great for trimming and preparing upload-friendly versions of PDF files, such as 
 
 - Install Ghostscript first: [ghostscript.com/releases](https://www.ghostscript.com/releases/)
 - Scanned PDFs won't become searchable - OCR them first if needed
+
+
+
+# Merge-pdfs.ps1
+
+This PowerShell script uses qpdf to combine multiple PDF files from a folder into a single document. It's handy for batch-merging reports, scanned forms, or anything else you've got piling up.
+
+## Requirements
+
+- Windows PowerShell
+- qpdf installed (you can get it from Winget)
+## Usage
+
+Open PowerShell and run the script like this if you dont use default values. 
+
+```powershell
+.\Merge-PDFs.ps1 -QpdfPath "C:\Path\To\qpdf.exe" -SourceFolder "C:\Path\To\PDFs" -OutputFileName "combined.pdf"
